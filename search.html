@@ -125,7 +125,7 @@
                             $.ajax({
 
                                 type:'GET',
-                                url:'./searchQ.php',
+                                url:'./refresh.php',
                                 data:{},
                                 success:function($response){
                                     var response=JSON.parse($response);
@@ -234,7 +234,7 @@ $(document).ready(function() {
     $.ajax({
 
         type:'GET',
-        url:'./searchQ.php',
+        url:'./refresh.php',
         data:{},
         success:function($response){
             var response=JSON.parse($response);
