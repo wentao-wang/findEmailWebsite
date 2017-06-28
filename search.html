@@ -135,7 +135,7 @@
                             var cellCount=response.length;
                             
 
-                            var htmltext="<h4>Search Queue</h4><center><table border='1' width='800'><tbody><tr ><th width='800'>Id</th><th width='800'>Keyword</th><th width='800'>Status</th><th width='800'>Result</th><th width='200'>Delete</th></tr>";
+                            var htmltext="<h4>Search Queue</h4><center><table border='1' width='800'><tbody><tr ><th width='800'>Date</th><th width='800'>Keyword</th><th width='800'>Status</th><th width='800'>Result</th><th width='200'>Delete</th></tr>";
 
                             for(var i=0;i<cellCount;i++){
                                 if(response[i][3]=='0'){
@@ -145,8 +145,14 @@
                                 // htmltext+="'>";
                                 // htmltext+=response[i][0];
                                 // htmltext+="</td>";
+                               
 
-                                for(var j=0;j<3;j++){
+                                // alert(subString(response[i][0]));
+                                htmltext+="<td width='800'>";
+                                htmltext+=subString(response[i][0]);
+                                htmltext+="</td>";
+
+                                for(var j=1;j<3;j++){
                                     htmltext+="<td width='800'>";
                                     htmltext+=response[i][j];
                                     htmltext+="</td>";
@@ -191,13 +197,16 @@
                             
                             
 
-                            var htmltext="<h4>Search Queue</h4><center><table border='1' width='800'><tbody><tr ><th width='800'>Id</th><th width='800'>Keyword</th><th width='800'>Status</th><th width='800'>Result</th><th width='200'>Delete</th></tr>";
+                            var htmltext="<h4>Search Queue</h4><center><table border='1' width='800'><tbody><tr ><th width='800'>Date</th><th width='800'>Keyword</th><th width='800'>Status</th><th width='800'>Result</th><th width='200'>Delete</th></tr>";
 
                             for(var i=0;i<cellCount;i++){
                                 if(response[i][3]=='0'){
 
                                     htmltext+="<tr>";
-                                    for(var j=0;j<3;j++){
+                                     htmltext+="<td width='800'>";
+                                htmltext+=subString(response[i][0]);
+                                htmltext+="</td>";
+                                    for(var j=1;j<3;j++){
 
                                         htmltext+="<td width='800'>";
                                         htmltext+=response[i][j];
@@ -229,6 +238,18 @@
 
 
 
+function subString(s){
+    ss=s.substr(0,4);
+    ss+="-";
+    ss+=s.substr(4,2);
+    ss+="-";
+    ss+=s.substr(6,2);
+    return ss;
+}
+
+
+
+
 
 $(document).ready(function() {
     $.ajax({
@@ -247,13 +268,16 @@ $(document).ready(function() {
                             
                             
 
-                            var htmltext="<h4>Search Queue</h4><center><table border='1' width='800'><tbody><tr ><th width='800'>Id</th><th width='800'>Keyword</th><th width='800'>Status</th><th width='800'>Result</th><th width='200'>Delete</th></tr>";
+                            var htmltext="<h4>Search Queue</h4><center><table border='1' width='800'><tbody><tr ><th width='800'>Date</th><th width='800'>Keyword</th><th width='800'>Status</th><th width='800'>Result</th><th width='200'>Delete</th></tr>";
 
                             for(var i=0;i<cellCount;i++){
                                 if(response[i][3]=='0'){
 
                                     htmltext+="<tr>";
-                                    for(var j=0;j<3;j++){
+                                     htmltext+="<td width='800'>";
+                                htmltext+=subString(response[i][0]);
+                                htmltext+="</td>";
+                                    for(var j=1;j<3;j++){
 
                                         htmltext+="<td width='800'>";
                                         htmltext+=response[i][j];
@@ -324,12 +348,15 @@ $('#sub').click(function(){
 
                             //  }
 
-                            var htmltext="<h4>Search Queue</h4><center><table border='1' width='800'><tbody><tr ><th width='800'>Id</th><th width='800'>Keyword</th><th width='800'>Status</th><th width='800'>Result</th><th width='200'>Delete</th></tr>";
+                            var htmltext="<h4>Search Queue</h4><center><table border='1' width='800'><tbody><tr ><th width='800'>Date</th><th width='800'>Keyword</th><th width='800'>Status</th><th width='800'>Result</th><th width='200'>Delete</th></tr>";
 
                             for(var i=0;i<cellCount;i++){
                                 if(response[i][3]=='0'){
                                     htmltext+="<tr>";
-                                    for(var j=0;j<3;j++){
+                                     htmltext+="<td width='800'>";
+                                htmltext+=subString(response[i][0]);
+                                htmltext+="</td>";
+                                    for(var j=1;j<3;j++){
                                         htmltext+="<td width='800'>";
                                         htmltext+=response[i][j];
                                         htmltext+="</td>";
