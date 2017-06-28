@@ -11,9 +11,9 @@
         if(isset($_GET['searchId'])) $id=$_GET['searchId'];
         
 
-        $serverName = 'localhost:3306';
-        $userName = 'root';
-        $password= 'root';
+        $serverName = '54.69.239.219';
+        $userName = 'lyihan';
+        $password= '900225';
         $database = 'EmailCrawlerDB';
         $con = mysqli_connect($serverName,$userName,$password,$database);
         if (!$con)

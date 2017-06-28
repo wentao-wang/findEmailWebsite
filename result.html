@@ -117,13 +117,13 @@ if(GetRequest("status")=="failed"){
     $('#resTable').html(text);
 
 }
-if(GetRequest("status")=="processing"){
-    text="<br><br><br><br><br><br><br><br><br><br<br><br><br><br><br><br><center><p class='title'> This search is still processing. Please try others.</p><center>";
+// if(GetRequest("status")=="processing"){
+//     text="<br><br><br><br><br><br><br><br><br><br<br><br><br><br><br><br><center><p class='title'> This search is still processing. Please try others.</p><center>";
     
-    $('#resTable').html(text);
+//     $('#resTable').html(text);
 
-}
-if(GetRequest("status")=="completed"){
+// }
+if(GetRequest("status")=="completed"||"processing"){
     text="<br><br><center><p class='title'> Result</p><center>";
     text+="<center><br><table border='1' width='800' height='300px' id='resultTable'><tbody><tr ><th width='800'>Linkedin</th><th width='800'>Name</th><th width='800'>Title</th><th width='800'>Emails</th></tr>";
     var searchId= GetRequest("id");
