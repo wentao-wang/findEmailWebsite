@@ -25,16 +25,18 @@
 
         
 
-        $sql1='select customer_linkedin_url from Result where search_id="'.$id.'" ;';
+        $sql1='select customer_linkedin_url from Result where search_id="20170628200804331" ;';
                 // $sql1='select * from Result where search_id="20170621234247153";';
         $result=mysqli_query($con, $sql1 );
         $response=array();
         while($row = mysqli_fetch_array($result,MYSQLI_NUM)){
             $response[]=$row[0];
+            // echo $row[0]."\n";
+
 
         }
 
-         $response2=array();
+        $response2=array();
         foreach ($response as $url) {
             $sql2='select customer_name from Customer where customer_linkedin_url="'.$url.'";';
 
@@ -81,7 +83,7 @@
         
 
         $result=array($response,$response2plus,$response3plus,$response4);
-// var_dump($result);
+var_dump($result);
 
         echo json_encode($result);
          // echo json_last_error_msg();
