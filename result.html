@@ -111,7 +111,7 @@ if(GetRequest("status")=="pending"){
     $('#resTable').html(text);
 
 }
-if(GetRequest("status")=="failed"){
+else if(GetRequest("status")=="failed"){
     text="<br><br><br><br><br><br><br><br><br><br<br><br><br><br><br><br><center><p class='title'> This search is failed. Please try others.</p><center>";
     
     $('#resTable').html(text);
@@ -123,7 +123,7 @@ if(GetRequest("status")=="failed"){
 //     $('#resTable').html(text);
 
 // }
-if(GetRequest("status")=="completed"||"processing"){
+else{
     text="<br><br><center><p class='title'> Result</p><center>";
     text+="<center><br><table border='1' width='800' height='300px' id='resultTable'><tbody><tr ><th width='800'>Linkedin</th><th width='800'>Name</th><th width='800'>Title</th><th width='800'>Emails</th></tr>";
     var searchId= GetRequest("id");
