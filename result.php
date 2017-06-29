@@ -25,7 +25,7 @@
 
         
 
-        $sql1='select customer_linkedin_url from Result where search_id="'.$id.'";';
+        $sql1='select customer_linkedin_url from Result where search_id="'.$id.' limit 50";';
                 // $sql1='select * from Result where search_id="20170621234247153";';
         $result=mysqli_query($con, $sql1 );
         $response=array();
