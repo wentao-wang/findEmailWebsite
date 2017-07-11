@@ -61,10 +61,24 @@
 		}
 		$response2=array();
 		foreach ($response as $searchid){
-			$sql3='select count(customer_linkedin_url) from Result where search_id="'.$searchid[0].'";';
+			$sql4='select search_from from Search where search_id="'.$searchid[0].'";';
+			$fromresult=mysqli_query($con,$sql4);
+			$from=mysqli_fetch_array($fromresult,MYSQLI_NUM);
+			
+			if($from[0]=='linkedin'){
+				$sql3='select count(customer_linkedin_url) from Result where search_id="'.$searchid[0].'";';
 		$result3=mysqli_query($con,$sql3);
 		$count=mysqli_fetch_array($result3,MYSQLI_NUM);
 		$response2[]=$count[0];
+		
+	}else{
+		$sql3='select count(sg_person_name) form Result_SG where search_id ="'.$searchid[0].'";';
+		$result3=mysqli_query($con,$sql3);
+		$count=mysqli_fetch_array($result3,MYSQLI_NUM);
+		$response2[]=$count[0];
+		
+	}
+			
 		}
 		// echo json_encode($response2);
 
