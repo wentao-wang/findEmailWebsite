@@ -42,7 +42,7 @@
 		$userId=$_SESSION['userId'];
 		$internalCompany=$_SESSION['internalCompany'];
 
-		$sql1='insert into Search values("'.$id.'","'.$count.'","'.$title.'","'.$city.'","150","pending","'.$userId.'","'.$internalCompany.'",0);';
+		$sql1='insert into Search values("'.$id.'","'.$count.'","'.$title.'","'.$city.'","150","linkedin","pending","'.$userId.'","'.$internalCompany.'",0);';
 		$result=mysqli_query($con, $sql1 );
 
 		$sql2='select search_id,search_keywords,search_progress, has_deleted from Search where user_id="'.$userId.'" and internal_company_id="'.$internalCompany.'";';
