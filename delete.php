@@ -59,7 +59,7 @@
 		$response2[]=$count[0];
 		
 	}else{
-		$sql3='select count(sg_person_name) form Result_SG where search_id ="'.$searchid[0].'";';
+		$sql3='select count(sg_person_name) from Result_SG where search_id ="'.$searchid[0].'";';
 		$result3=mysqli_query($con,$sql3);
 		$count=mysqli_fetch_array($result3,MYSQLI_NUM);
 		$response2[]=$count[0];
