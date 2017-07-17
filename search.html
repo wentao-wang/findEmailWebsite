@@ -269,11 +269,14 @@ $('#sub').click(function(){
     var city=$('#city').val();
     var count=$('#count').val();
     var searchFrom = $('#searchChoice').val();
+    var linkedin_email = $('#linkedin_email').val();
+    var linkedin_password = $('#linkedin_password').val();
+    
     $.ajax({
 
         type:'GET',
         url:'./searchQ.php',
-        data:{title:title,city:city,count:count,searchFrom:searchFrom},
+        data:{title:title,city:city,count:count,searchFrom:searchFrom,linkedin_email:linkedin_email,linkedin_password:linkedin_password},
         success:function($response){
              drawTable($response);
                         }
