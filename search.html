@@ -176,7 +176,7 @@
     $.ajax({
         type:'GET',
         url:'./delete.php',
-        data:{id:id},
+        data:{id:decodeURI(id)},
 
         success:function($response){
             drawTable($response);
@@ -233,7 +233,7 @@ function drawTable($response){
             htmltext+="<td width='800'><a target='_blank' href='"+resultUrl+"'>result</a></td>";
             htmltext+="<td><a href='https://na35.salesforce.com/home/home.jsp' target='_blank'>salesforce</a></td>";
             htmltext+="<td><button onclick=del('";
-            htmltext+=response[i][0];
+            htmltext+=encodeURI(response[i][0]);
             htmltext+="')>delete</button></td></tr>";
                                     // htmltext+="<td><button class='del'>delete</button></td></tr>";
 
