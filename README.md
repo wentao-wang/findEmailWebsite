@@ -95,4 +95,4 @@ insert pending query -> query get scanned -> update query's status -> check resu
 | CrawlCustomerThread   | Unit of task excuted when crawling emails of a person |
 
 ## Copyright and license
-Code and documentation copyright 2016-2017 the [Jianyang Zhang](https://github.com/JianyangZhang), [Wentao Wang](https://github.com/wentao-wang) and [Yihan Lu](https://github.com/xdoobx). Code released under the [MIT License](https://github.com/JianyangZhang/EmailCrawler/blob/master/licence).
+Code and documentation copyright 2016-2017 the  [Wentao Wang](https://github.com/wentao-wang)  
