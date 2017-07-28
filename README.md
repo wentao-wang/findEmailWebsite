@@ -68,12 +68,6 @@ insert pending query -> query get scanned -> update query's status -> check resu
 | SalesgenieDAO     | insert and update data to the SalesgenieDAO table |
 | SearchQueryDAO     | insert and update data to the SearchQueryDAO table |
 
-| Package crawler.model | Description   |
-| ----------------         |---------------|
-| CrawlerQuery     | Data model of a query |
-| Customer     | Data model of a customer |
-| Email     | Data model of an Email |
-| SalesGenieResult     |  Data model of a result from SalesGenie |
 
 
 
