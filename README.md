@@ -75,19 +75,7 @@ insert pending query -> query get scanned -> update query's status -> check resu
 | Email     | Data model of an Email |
 | SalesGenieResult     |  Data model of a result from SalesGenie |
 
-| Package crawler.service | Description   |
-| ----------------         |---------------|
-| Callback     | Interface of the callback when a query has been completed or failed |
-| PollSearchQueryService     | Check if there is any pending query in database. If yes, send it to the line of production |
-| CrawlEmailService     | The process of crawling email from Linkedin  |
-| CrawlSalesGenieService     | The process of crawling SalesGenie |
-| DriveBrowserService     | The implementation of the general browser operations |
-| DriveLinkedinService     | The implementation of the browser operations for crawling Linkedin |
-| DriveSalesgenieService     | The implementation of the browser operations for crawling SalesGenie |
-| EmailVerifyService     | Verify if a given email address is deliverable |
-| GeneratAccurateEmailsService     | Generate a person's email addresses based on his name and companies |
-| SendEmailService     | Send email by Java code, should not be used to spam emails |
-| LaunchWindowService     | UI by Java Swing (discarded) |
+
 
 
 
