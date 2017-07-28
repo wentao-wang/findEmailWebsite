@@ -89,10 +89,7 @@ insert pending query -> query get scanned -> update query's status -> check resu
 | SendEmailService     | Send email by Java code, should not be used to spam emails |
 | LaunchWindowService     | UI by Java Swing (discarded) |
 
-| Package crawler.thread | Description   |
-| ----------------       |---------------|
-| CrawlCompanyThread   | Unit of task excuted when crawling emails of a company of a person (not used) |
-| CrawlCustomerThread   | Unit of task excuted when crawling emails of a person |
+
 
 ## Copyright and license
 Code and documentation copyright 2016-2017 the  [Wentao Wang](https://github.com/wentao-wang)  
